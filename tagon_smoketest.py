@@ -12,7 +12,7 @@ class TagOnSmokeTest(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
         baseURL = "http://tagonsupport.cubixsource.com/administrator/login"
-        cls.driver = webdriver.Chrome("C:\\Users\\Bilal.Ikram\\PycharmProjects\\firstSeleniumTest\\venv\\selenium\\webdriver\\chromedriver.exe")
+        cls.driver = webdriver.Chrome("")
         cls.driver.maximize_window()
         cls.driver.get(baseURL)
         cls.actions = ActionChains(cls.driver)
@@ -20,12 +20,12 @@ class TagOnSmokeTest(unittest.TestCase):
     def test_class(self):
         a = self.driver.find_element(By.NAME, "email")
         self.assertTrue(a, "'a' is not True")
-        a.send_keys("admin@tagonapp.com")
+        a.send_keys("your@email.com")
 
     def test_class2(self):
         b = self.driver.find_element(By.NAME, "password")
         self.assertTrue(b, "'b' is not True")
-        b.send_keys("admin123")
+        b.send_keys("your@password")
 
     def test_class3(self):
         c = self.driver.find_element(By.CSS_SELECTOR, ".btn-primary")
